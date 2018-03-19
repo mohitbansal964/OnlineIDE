@@ -9,6 +9,6 @@ language.
 A login system is provided for saving submitted code for later use.
 
 A REST API is also created for this project. Read the docs here:- 
-www.mohit-onlineide.herokuapp.com/api/docs .
+https://mohit-onlineide.herokuapp.com/api/docs/ .
 A key for using this API is also provided for authenticating user.
 
