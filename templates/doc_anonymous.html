@@ -62,7 +62,7 @@
     <a name="2"></a>
     <h3><strong><u>GET request:</u></strong></h3>
     <p>With this API, you can obtain a user's all submitted codes in json format. You just need to send a valid GET request to the following URL.
-    <pre style="font-size: 15px;">"http://www.mohit-onlineide.com/api"</pre>
+    <pre style="font-size: 15px;">"http://www.mohit-onlineide.herokuapp.com/api"</pre>
     Include all the following <strong>GET</strong> parameters when you request the URL:<br/>
       <ol>
         <li><strong>key</strong> -this is your API Developer Key</li>
@@ -79,7 +79,7 @@
     <p>Following code is in Python3:</p>
     <pre pre-scrollable style="font-size: 15px;">
 import requests
-url="http://www.mohit-onlineide.com/api"
+url="http://www.mohit-onlineide.herokuapp.com/api"
 params={
     "key":"Your_Developer_API_Key",
     "title":"title_of_submitted_code"(optional)
@@ -92,7 +92,7 @@ print(r.content)
   <a name="4"></a>
   <h3><strong><u>POST request:</u></strong></h3>
   <p>Creating a new code via our API is very easy. You simply have to send a valid POST request to the URL shown below. Please make sure you are sending the data as the UTF-8 charset!
-  <pre style="font-size: 15px;">"http://www.mohit-onlineide.com/api"</pre>
+  <pre style="font-size: 15px;">"http://www.mohit-onlineide.herokuapp.com/api"</pre>
   Include all the following <strong>POST</strong> parameters when you request the URL:<br/>
   <ol>
     <li><strong>key</strong>- this is your API Developer Key</li>
@@ -120,7 +120,7 @@ print(r.content)
   <p>Following code is in Python3:
     <pre pre-scrollable style="font-size: 15px;">
 import requests
-url="http://www.mohit-onlineide.com/api"
+url="http://www.mohit-onlineide.herokuapp.com/api"
 data={
     "key":"Your_Developer_API_Key",
     "title":"Hello_world",
@@ -139,7 +139,7 @@ print(r.content)
   <a name="6"></a>
   <h3><strong><u>PATCH request:</u></strong></h3>
   <p>With this API you can update your submitted code. You will need to send a valid PATCH request to the URL below to update the data:
-    <pre style="font-size: 15px;">"http://www.mohit-onlineide.com/api"</pre>
+    <pre style="font-size: 15px;">"http://www.mohit-onlineide.herokuapp.com/api"</pre>
     Include all the following <strong>PATCH</strong> parameters when you request the URL:<br/>
     <ol>
       <li><strong>key</strong>- this is your API Developer Key</li>
@@ -159,7 +159,7 @@ print(r.content)
   <p>Following code is in Python3:
     <pre pre-scrollable style="font-size: 15px;">
 import requests
-url="http://www.mohit-onlineide.com/api"
+url="http://www.mohit-onlineide.herokuapp.com/api"
 data={
     "key":"Your_Developer_API_Key",
     "title1":"Hello_world",
@@ -179,7 +179,7 @@ print(r.content)
   <a name="8"></a>
   <h3><strong><u>DELETE request:</u></strong></h3>
   <p>With this API you can delete your submitted code. You will need to send a valid DELETE request to the URL below to delete the data:
-    <pre style="font-size: 15px;">"http://www.mohit-onlineide.com/api"</pre>
+    <pre style="font-size: 15px;">"http://www.mohit-onlineide.herokuapp.com/api"</pre>
     Include all the following <strong>DELETE</strong> parameters when you request the URL:<br/>
     <ol>
       <li><strong>key</strong>- this is your API Developer Key</li>
@@ -193,7 +193,7 @@ print(r.content)
   <p>Following code is in Python3:
     <pre pre-scrollable style="font-size: 15px;">
 import requests
-url="http://www.mohit-onlineide.com/api"
+url="http://www.mohit-onlineide.herokuapp.com/api"
 data={
     "key":"Your_Developer_API_Key",
     "title":"Hello_earth",
