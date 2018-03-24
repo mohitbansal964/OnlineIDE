@@ -427,7 +427,8 @@ def logout():
 
 @login_manager.unauthorized_handler
 def unauthorized_handler():
-    return 'Unauthorized'
+    flash('Unauthorized')
+    return redirect(url_for("home"))
 
 @app.after_request
 def after_request(response):
