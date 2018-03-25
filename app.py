@@ -383,7 +383,8 @@ def api():
 		if input_ =="":
 			input_=" "
 		member=hackerrank_api(username=username,title=title,code=code,language=language,input_=input_)
-		ide.insert_one(member)
+		member1=dict(member)
+		ide.insert_one(member1)
 		return jsonify(member),200
 	elif request.method=='PATCH':
 		title_old=request.form.get("title1")
@@ -398,7 +399,7 @@ def api():
 		title2=title1.replace("_","a")
 		if not title2.isalnum():
 			return jsonify({"key":"Title must be of alphanumeric characters and underscore."}),400
-		existing_title=ide.find_one({"username":username,"title": title})
+		existing_title=ide.find_one({"username":username,"title": title1})
 		if existing_title is not None:
 			return jsonify({"key":"Title must be unique."}),400
 		title=title1
