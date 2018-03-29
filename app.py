@@ -22,7 +22,7 @@ languages={"ada":53,"android":47,"android_gradle":63,"babeljs":65,"bash":14,"bra
 
 
 app=Flask(__name__)
-app.secret_key="mohit"
+app.secret_key="**knk*n"
 
 login_manager=flask_login.LoginManager()
 login_manager.init_app(app)
