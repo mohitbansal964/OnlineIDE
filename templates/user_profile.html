@@ -9,11 +9,12 @@
   <link href='{{url_for("static",filename="img6.jpg")}}' rel="shortcut icon">
   <script src='{{url_for("static",filename="js/chart.min.js")}}'></script>
   <script type="text/javascript">
-         <!--
+  	var a =document.getElementById("confirmation");
             function getConfirmation(){
-               var retVal = confirm("Do you want to continue ?");
+               var retVal = confirm("Do you want to delete code?");
                if( retVal == true ){
-                  return true;
+               	a.setAttribute("href","/users/{{username}}/{{row[1]}}/delete");
+               	return true;
                }
                else{
                   return false;
@@ -119,7 +120,7 @@
 					</td>
 					<td>
 						<a href="/users/{{username}}/{{row[1]}}"><i class="icon-pencil" title="Edit"></i></a>
-						<a href="/users/{{username}}/{{row[1]}}/delete"><i class="icon-trash" title="Delete" onclick="getConfirmation();"></i></a>
+						<a id="confirmation"><i class="icon-trash" title="Delete" onclick="getConfirmation();"></i></a>
             <a href="/users/{{username}}/{{row[1]}}/download" download='{{row[1]}}.txt' title="Download"><i class="icon-download-alt" ></i></a>
 					</td>
 				</tr>
