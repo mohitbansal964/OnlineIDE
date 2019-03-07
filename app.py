@@ -11,7 +11,7 @@ client = MongoClient(MONGODB_URI)
 db = client.get_database("online_ide")
 users = db.User
 ide=db.Codes
-
+homecodes= db.home
 
 languages={"ada":53,"android":47,"android_gradle":63,"babeljs":65,"bash":14,"brainfuck":19,"c":1,"c_clang":67,"clojure":13,
 "cobol":36,"coffeescript":59,"cpp":2,"cpp14":58,"cpp_clang":68,"csharp":9,"d":22,"db2":44,"elixir":52,"erlang":16,"fortran":54,
@@ -74,6 +74,7 @@ def home():
 		flag=False
 		if guest['result']=="Successfully Executed":
 			flag=True
+		homecodes.insert_one(guest)
 		return render_template('home_submit.html',code=code,language=int(language),input=input_,output=guest['output'], \
 			result=guest['result'],time=guest['time'],mem=guest['memory'],languages=languages,flag=flag)
 
