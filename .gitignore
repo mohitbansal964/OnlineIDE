@@ -1,2 +1,6 @@
 .ipynb_checkpoints/
+.idea/
 venv/
+Development/
+*.pyc
+config.py

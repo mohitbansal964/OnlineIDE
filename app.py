@@ -6,9 +6,10 @@ import requests
 from os import urandom,remove
 from binascii import hexlify
 
-MONGODB_URI = "mongodb://<username>:<password>@ds119268.mlab.com:19268/online_ide"
+from config import MONGODB_URI, db_name, SECRET_KEY
+
 client = MongoClient(MONGODB_URI)
-db = client.get_database("online_ide")
+db = client.get_database(db_name)
 users = db.User
 ide=db.Codes
 homecodes= db.home
@@ -22,7 +23,7 @@ languages={"ada":53,"android":47,"android_gradle":63,"babeljs":65,"bash":14,"bra
 
 
 app=Flask(__name__)
-app.secret_key="**knk*n"
+app.secret_key= SECRET_KEY
 
 login_manager=flask_login.LoginManager()
 login_manager.init_app(app)
